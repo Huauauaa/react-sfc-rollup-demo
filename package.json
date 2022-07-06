@@ -1,0 +1,34 @@
+{
+  "name": "@harvey0379/h-design",
+  "version": "0.0.1",
+  "main": "dist/react-sfc-rollup-demo.ssr.js",
+  "browser": "dist/react-sfc-rollup-demo.esm.js",
+  "module": "dist/react-sfc-rollup-demo.esm.js",
+  "unpkg": "dist/react-sfc-rollup-demo.min.js",
+  "types": "dist/types/src/entry.esm.d.ts",
+  "files": [
+    "dist/*",
+    "src/**/*.*"
+  ],
+  "author": "Huaweiwei <harvey0379@163.com>",
+  "license": "MIT",
+  "scripts": {
+    "serve": "vue-cli-service serve dev/serve.ts",
+    "prebuild": "rimraf ./dist",
+    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
+    "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "postbuild": "rimraf ./dist/types/dev ./dist/types/src/entry.d.ts"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "cross-env": "^7.0.3",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.75.7",
+    "rollup-plugin-babel": "^4.4.0"
+  }
+}
