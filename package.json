@@ -1,6 +1,6 @@
 {
   "name": "@harvey0379/h-design",
-  "version": "0.0.1",
+  "version": "0.0.2-0",
   "main": "dist/react-sfc-rollup-demo.ssr.js",
   "browser": "dist/react-sfc-rollup-demo.esm.js",
   "module": "dist/react-sfc-rollup-demo.esm.js",
