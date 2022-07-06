@@ -1,7 +1,4 @@
-// import Switch from './Components/Switch'
+import Button from './lib-components/Button.jsx'
+import Switch from './lib-components/Switch.jsx'
 
-// export { Switch }
-
-// 两种写法
-
-export { default as Switch } from './lib-components/Switch.jsx'
+export { Switch, Button }
